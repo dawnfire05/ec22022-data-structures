@@ -7,8 +7,10 @@ using namespace std;
 Node::Node(string& data): data(data){}
 
 SLinkedList::SLinkedList(): head(NULL){}
-Node SLinkedList::addFront(Node& node)
+Node SLinkedList::addFront(String& e)
 {
+	Node* node = new Node;	
+	node-> elem = e;
     node-> next = head;
     head = &node;
     return *head;
