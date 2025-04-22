@@ -7,6 +7,8 @@ class Node {
 private:
     string data;
     Node* next;
+
+    friend class SLinkedList;
 public:
     Node(string&);
 };
@@ -16,7 +18,7 @@ private:
     Node* head;
 public:
     SLinkedList();
-    Node addFront(Node&);
+    Node addFront(string& e);
     Node delFront();
     Node addMiddle(Node&, int);
     Node delMiddle(int);
